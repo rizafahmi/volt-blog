@@ -1,0 +1,11 @@
+<:Title>
+  New Blog Post
+
+<:Body>
+  <form e-submit="save" role="form">
+    <:fields:text value="{{_title}}" label="Title">
+    <:fields:textarea value="{{_body}}" label="Text">
+
+
+    <button type="submit" class="btn btn-large btn-warning">Submit</button>
+  </form>

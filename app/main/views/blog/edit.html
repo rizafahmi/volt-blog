@@ -2,15 +2,15 @@
 Edit
 
 <:Body>
-  {{ if state != :loaded }}
-  <h1>Loading...</h1>
-  {{ else }}
-  <h1>{{title}}</h1>
-  {{ end }}
+  {{ if loaded? }}
+  <h1>{{_title}}</h1>
   <form e-submit="save" role="form">
-    <!-- <:fields:text value="{{_title}}" label="Title"> -->
-    <!-- <:fields:textarea value="{{_body}}" label="Text"> -->
+    <:fields:text value="{{_title}}" label="Title">
+    <:fields:textarea value="{{_body}}" label="Text">
 
 
     <button type="submit" class="btn btn-large btn-warning">Submit</button>
+  {{ else }}
+  <h1>Loading...</h1>
+  {{ end }}
   </form>
